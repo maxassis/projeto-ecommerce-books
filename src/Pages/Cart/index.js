@@ -28,7 +28,29 @@ function Cart() {
         <S.Descriptions>
         <S.Title2>Crazy rich asians</S.Title2>
         <S.Author>Kevin Kwan</S.Author>
-        <S.Descript>the outrageously funny debut novel about three super-rich,<br/> pedigreed Chinese families and the gossip..</S.Descript>
+        <S.Descript>the outrageously funny debut novel about three super-rich, pedigreed Chinese families and the gossip..</S.Descript>
+        <S.Valor>R$14.99</S.Valor>
+        <S.ValorFinal>1x R$14.99</S.ValorFinal>         
+        </S.Descriptions> 
+        </S.Wrapper>
+
+        <S.TwoButtons>
+        <S.Button>-</S.Button>
+        <S.Button2>+</S.Button2> 
+        </S.TwoButtons> 
+
+        </S.ContainerBook>
+
+        <S.ContainerBook>
+          <S.Wrapper>      
+         <S.ContainerImage>   
+          <S.Image src={CrazyImg} />
+         </S.ContainerImage>  
+
+        <S.Descriptions>
+        <S.Title2>Crazy rich asians</S.Title2>
+        <S.Author>Kevin Kwan</S.Author>
+        <S.Descript>the outrageously funny debut novel about three super-rich, pedigreed Chinese families and the gossip..</S.Descript>
         <S.Valor>R$14.99</S.Valor>
         <S.ValorFinal>1x R$14.99</S.ValorFinal>         
         </S.Descriptions> 

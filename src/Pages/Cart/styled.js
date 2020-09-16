@@ -26,7 +26,7 @@ export const Container = styled.div`
     
     height: 2186px;
     width: 100%;
-    
+   
 
 `
 
@@ -39,6 +39,7 @@ justify-content: space-between;
 align-items: center;
 margin-left: auto;
 margin-right: auto;
+margin-bottom: 55.23px;
 
 
 
@@ -66,7 +67,7 @@ export const Descriptions = styled.div`
     margin-left: 27.73px;
     margin-top: auto;
     margin-bottom: auto;
-    
+    width: 517px;
 
     
 
@@ -128,6 +129,7 @@ export const ValorFinal = styled.p`
     line-height: 22px;
     text-transform: uppercase;
     color: #1C2A39;
+    margin-top: 11px;
 
 
 `
@@ -180,33 +182,38 @@ export const Wrapper = styled.div`
 export const ContainerSend = styled.div`
     display: flex;
     justify-content: flex-end;
-    padding-top: 150px;
     margin-left: auto;
     margin-right: auto;
-    width: 900px
+    margin-top: 108px;
+    width: 900px;
+    height: 46px;
+    
+
 
 
 `
 
 
 export const ButtonSend = styled.div`
-     width: 176px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 176px;
     height: 45px;
     color: white;
-    font-family: Montserrat;
+    font-family: 'Montserrat', sans-serif;
     background-color: white;
     font-style: normal;
     font-weight: bold;
     font-size: 8px;
     color: #4C3DB2;
     border: 1px solid;
-    text-align: center;
-    
 
+    
 
 `
 export const Linki = styled(Link)`
     text-decoration: none;
     margin: auto 0 auto 0;
-    color: black;
+   
 `
