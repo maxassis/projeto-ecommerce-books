@@ -185,4 +185,5 @@ color: #5C6A79;
 `
 export const Linki = styled(Link)`
     text-decoration: none;
+    color: #5C6A79;
 `

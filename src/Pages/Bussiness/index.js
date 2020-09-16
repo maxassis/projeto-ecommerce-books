@@ -5,7 +5,11 @@ import Footer from "../../components/Footer/index";
 import * as S from "./styled";
 import ProductsHome from "../../components/ProductsHome/index";
 import Point from "../../images/Ellipse 3.png";
-import BraveImg from "../../images/brave_new_world.svg";
+import BraveImg from '../../images/brave_new_world.svg'
+import EducatedImg from '../../images/educated.svg'
+import CrazyImg from '../../images/crazy_rich_asians.svg'
+import HandmaidsImg from '../../images/the_handmaids_tale.svg'
+
 
 function Business() {
   const [books, setBooks] = useState([]);
@@ -61,7 +65,10 @@ function Business() {
             return (
               <S.ContainerProducts>
                 <div>
-                  <img src={BraveImg} alt="brave" />
+            { book.author === "Kevin Kwan" ? <img src={CrazyImg} alt="brave" /> : "" }
+            { book.author === "Margaret Atwood" ? <img src={HandmaidsImg} alt="brave" /> : "" }
+            { book.author === "Aldous Huxley" ? <img src={BraveImg} alt="brave" /> : "" }
+            { book.author === "Tara Westover" ? <img src={EducatedImg} alt="brave" /> : "" } 
                 </div>
 
                 <S.Description>

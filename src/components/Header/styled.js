@@ -2,6 +2,7 @@ import styled from 'styled-components'
 import {User} from '@styled-icons/boxicons-regular/User'
 import {Search} from '@styled-icons/evil/Search'
 import {Lock} from '@styled-icons/bootstrap/Lock'
+import {Link} from 'react-router-dom'
 
 export const Container = styled.div`
     display: flex;
@@ -11,7 +12,6 @@ export const Container = styled.div`
     height: 116px;
     width: 100%;
     
-
 
 `
 
@@ -71,4 +71,9 @@ export const LockIcon = styled(Lock)`
     margin-left: 42.16px;
     
 
+`
+
+export const Linki = styled(Link)`
+    text-decoration: none;
+    color: black;
 `

@@ -31,30 +31,33 @@ function ProductsHome() {
         <S.ListGender>
         <S.List>
             <S.ListItem1><S.Point src={Point} alt="ponto" />Categories</S.ListItem1>
-            <S.ListItem><S.Linki to="/business">Art & Fashion</S.Linki></S.ListItem>
-            <S.ListItem><S.Linki to="/business">Biography</S.Linki></S.ListItem>
-            <S.ListItem><S.Linki to="/business">Business</S.Linki></S.ListItem>
-            <S.ListItem><S.Linki to="/business">Children`s</S.Linki></S.ListItem>
-            <S.ListItem><S.Linki to="/business">Education</S.Linki></S.ListItem>
-            <S.ListItem><S.Linki to="/business">Fiction & Poetry</S.Linki></S.ListItem>
-            <S.ListItem><S.Linki to="/business"> Education</S.Linki></S.ListItem>
-            <S.ListItem><S.Linki to="/business">Film, TV & Drama</S.Linki></S.ListItem>
-            <S.ListItem><S.Linki to="/business">Food & Drink</S.Linki></S.ListItem>
-            <S.ListItem><S.Linki to="/business">Film, TV & Drama</S.Linki></S.ListItem>
-            <S.ListItem><S.Linki to="/business">Health & Wellbeing</S.Linki></S.ListItem>
-            <S.ListItem><S.Linki to="/business">History & Politics</S.Linki></S.ListItem>
-            <S.ListItem><S.Linki to="/business">Home & Garden</S.Linki></S.ListItem>
-            <S.ListItem><S.Linki to="/business">Languages with Grant</S.Linki></S.ListItem>
-            <S.ListItem><S.Linki to="/business">Sport & Hobbies</S.Linki></S.ListItem>
-            <S.ListItem><S.Linki to="/business">Travel & Maps</S.Linki></S.ListItem>     
+            <S.ListItem><S.Linki to="/business" target="_top">Art & Fashion</S.Linki></S.ListItem>
+            <S.ListItem><S.Linki to="/business" target="_top">Biography</S.Linki></S.ListItem>
+            <S.ListItem><S.Linki to="/business" target="_top">Business</S.Linki></S.ListItem>
+            <S.ListItem><S.Linki to="/business" target="_top">Children`s</S.Linki></S.ListItem>
+            <S.ListItem><S.Linki to="/business" target="_top">Education</S.Linki></S.ListItem>
+            <S.ListItem><S.Linki to="/business" target="_top">Fiction & Poetry</S.Linki></S.ListItem>
+            <S.ListItem><S.Linki to="/business" target="_top"> Education</S.Linki></S.ListItem>
+            <S.ListItem><S.Linki to="/business" target="_top">Film, TV & Drama</S.Linki></S.ListItem>
+            <S.ListItem><S.Linki to="/business" target="_top">Food & Drink</S.Linki></S.ListItem>
+            <S.ListItem><S.Linki to="/business" target="_top">Film, TV & Drama</S.Linki></S.ListItem>
+            <S.ListItem><S.Linki to="/business" target="_top">Health & Wellbeing</S.Linki></S.ListItem>
+            <S.ListItem><S.Linki to="/business" target="_top">History & Politics</S.Linki></S.ListItem>
+            <S.ListItem><S.Linki to="/business" target="_top">Home & Garden</S.Linki></S.ListItem>
+            <S.ListItem><S.Linki to="/business" target="_top">Languages with Grant</S.Linki></S.ListItem>
+            <S.ListItem><S.Linki to="/business" target="_top">Sport & Hobbies</S.Linki></S.ListItem>
+            <S.ListItem><S.Linki to="/business" target="_top">Travel & Maps</S.Linki></S.ListItem>     
         </S.List>
         </S.ListGender>
 
 
          {books.map(function (book) {
           return  <S.ContainerProducts>
-          <div>    
-          <img src={BraveImg} alt="brave" />
+          <div>   
+            { book.author === "Kevin Kwan" ? <img src={CrazyImg} alt="brave" /> : "" }
+            { book.author === "Margaret Atwood" ? <img src={HandmaidsImg} alt="brave" /> : "" }
+            { book.author === "Aldous Huxley" ? <img src={BraveImg} alt="brave" /> : "" }
+            { book.author === "Tara Westover" ? <img src={EducatedImg} alt="brave" /> : "" } 
           </div>
   
           <S.Description>

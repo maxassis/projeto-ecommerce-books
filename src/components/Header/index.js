@@ -3,11 +3,12 @@ import * as S from './styled'
 
 
 
+
 function Header() {
     return(
         <>
         <S.Container>
-        <S.Title>Bookstore</S.Title>
+        <S.Title><S.Linki to="/">Bookstore</S.Linki></S.Title>
 
         <S.Menu>
         <S.Item1>BOOKS</S.Item1>
@@ -20,7 +21,7 @@ function Header() {
 
         <S.UserIcon/>
         <S.SearchIcon/>
-        <S.LockIcon/>
+        <S.Linki to="/business"><S.LockIcon/></S.Linki>
 
         </S.Icons>
 

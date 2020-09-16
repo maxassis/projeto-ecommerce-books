@@ -207,4 +207,6 @@ export const ButtonSend = styled.div`
 `
 export const Linki = styled(Link)`
     text-decoration: none;
+    margin: auto 0 auto 0;
+    color: black;
 `
