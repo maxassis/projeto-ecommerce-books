@@ -5,10 +5,13 @@ import Done from './Pages/Done/index'
 import Business from './Pages/Bussiness/index'
 import Cart from './Pages/Cart/index'
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
+import {StateProvider} from './context/contextState' 
+
 
 function App() {
   return (
    <>
+   <StateProvider>
    <GlobalStyles/>
    <BrowserRouter>
       
@@ -34,8 +37,7 @@ function App() {
     
     </BrowserRouter>
     
-   
-   
+    </StateProvider>
    
    
    </>

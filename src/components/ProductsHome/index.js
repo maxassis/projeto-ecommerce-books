@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from 'react'
+import React, {useEffect, useState, useContext} from 'react'
 import * as S from './styled'
 import Point from '../../images/Ellipse 3.png'
 import axios from 'axios'
@@ -6,11 +6,13 @@ import BraveImg from '../../images/brave_new_world.svg'
 import EducatedImg from '../../images/educated.svg'
 import CrazyImg from '../../images/crazy_rich_asians.svg'
 import HandmaidsImg from '../../images/the_handmaids_tale.svg'
-
+import {contextState} from '../../context/contextState'
 
 
 function ProductsHome() {
+    const [buy, setBuy] = useContext(contextState)
     const [books, setBooks] = useState([])
+    
 
 
     useEffect(() => {
@@ -22,7 +24,9 @@ function ProductsHome() {
         
       }, []); 
 
-    console.log(books[0])
+     console.log(buy)
+
+    
 
     return(
         <>
@@ -66,7 +70,7 @@ function ProductsHome() {
           <S.Review>{book.review}</S.Review>
           <S.BookData>{book.description}</S.BookData>
           <S.Price>{book.price}</S.Price><S.Price2>{book.prince_discount}</S.Price2><br/>
-          <S.Button><S.Linki to="/cart">BUY NOW</S.Linki></S.Button>
+          <S.Button onClick={()=>{setBuy(book.title)}}><S.Linki to="/cart">BUY NOW</S.Linki></S.Button>
           </S.Description>
   
       </S.ContainerProducts>

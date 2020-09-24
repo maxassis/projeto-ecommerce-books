@@ -1,18 +1,18 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useContext } from "react";
 import axios from "axios";
 import Header from "../../components/Header/index";
 import Footer from "../../components/Footer/index";
 import * as S from "./styled";
-import ProductsHome from "../../components/ProductsHome/index";
 import Point from "../../images/Ellipse 3.png";
-import BraveImg from '../../images/brave_new_world.svg'
-import EducatedImg from '../../images/educated.svg'
-import CrazyImg from '../../images/crazy_rich_asians.svg'
-import HandmaidsImg from '../../images/the_handmaids_tale.svg'
-
+import BraveImg from "../../images/brave_new_world.svg";
+import EducatedImg from "../../images/educated.svg";
+import CrazyImg from "../../images/crazy_rich_asians.svg";
+import HandmaidsImg from "../../images/the_handmaids_tale.svg";
+import { contextState } from "../../context/contextState";
 
 function Business() {
   const [books, setBooks] = useState([]);
+  const [buy, setBuy] = useContext(contextState);
 
   useEffect(() => {
     axios
@@ -25,7 +25,7 @@ function Business() {
       });
   }, []);
 
-  console.log(books[0]);
+  console.log(books);
 
   return (
     <>
@@ -65,10 +65,26 @@ function Business() {
             return (
               <S.ContainerProducts>
                 <div>
-            { book.author === "Kevin Kwan" ? <img src={CrazyImg} alt="brave" /> : "" }
-            { book.author === "Margaret Atwood" ? <img src={HandmaidsImg} alt="brave" /> : "" }
-            { book.author === "Aldous Huxley" ? <img src={BraveImg} alt="brave" /> : "" }
-            { book.author === "Tara Westover" ? <img src={EducatedImg} alt="brave" /> : "" } 
+                  {book.author === "Kevin Kwan" ? (
+                    <img src={CrazyImg} alt="brave" />
+                  ) : (
+                    ""
+                  )}
+                  {book.author === "Margaret Atwood" ? (
+                    <img src={HandmaidsImg} alt="brave" />
+                  ) : (
+                    ""
+                  )}
+                  {book.author === "Aldous Huxley" ? (
+                    <img src={BraveImg} alt="brave" />
+                  ) : (
+                    ""
+                  )}
+                  {book.author === "Tara Westover" ? (
+                    <img src={EducatedImg} alt="brave" />
+                  ) : (
+                    ""
+                  )}
                 </div>
 
                 <S.Description>
@@ -79,7 +95,13 @@ function Business() {
                   <S.Price>{book.price}</S.Price>
                   <S.Price2>{book.prince_discount}</S.Price2>
                   <br />
-                  <S.Button><S.Linki to="/cart">BUY NOW</S.Linki></S.Button>
+                  <S.Button
+                    onClick={() => {
+                      setBuy(book.title);
+                    }}
+                  >
+                    <S.Linki to="/cart">BUY NOW</S.Linki>
+                  </S.Button>
                 </S.Description>
               </S.ContainerProducts>
             );
