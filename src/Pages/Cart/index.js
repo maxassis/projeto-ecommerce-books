@@ -70,7 +70,7 @@ function Cart() {
                     <S.Author>{book.author}</S.Author>
                     <S.Descript>{book.description}</S.Descript>
                     <S.Valor>{book.price}</S.Valor>
-                    <S.ValorFinal>1x R$14.99</S.ValorFinal>
+                    <S.ValorFinal>1x R${book.prince_discount}</S.ValorFinal>
                   </S.Descriptions>
                 </S.Wrapper>
 
