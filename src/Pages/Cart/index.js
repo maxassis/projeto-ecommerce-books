@@ -11,22 +11,6 @@ import { contextState } from "../../context/contextState";
 
 function Cart() {
   const [buy, setBuy] = useContext(contextState);
-  const [books, setBooks] = useState([]);
-
-  useEffect(() => {
-    axios
-      .get("http://localhost:3333/books")
-      .then((response) => {
-        setBooks(response.data);
-      })
-      .catch((error) => {
-        console.log(error.response);
-      });
-  }, []);
-
-  const filtro = books.filter(function (bk) {
-    return bk.title === buy;
-  });
 
   return (
     <>
@@ -37,7 +21,7 @@ function Cart() {
       </S.Title>
 
       <S.Container>
-        {filtro.map(function (book) {
+        {buy.map(function (book) {
           return (
             <>
               <S.ContainerBook>

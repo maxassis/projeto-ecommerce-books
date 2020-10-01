@@ -25,6 +25,58 @@ function ProductsHome() {
 
   console.log(buy);
 
+  const addbook = (novoBook) => {
+    const newbook = [...buy, novoBook];
+
+    setBuy(newbook);
+  };
+
+  const allbooks = books.map(function (book) {
+    const chamaAddBook = () => {
+      addbook(book);
+    };
+
+    return (
+      <S.ContainerProducts>
+        <div>
+          {book.author === "Kevin Kwan" ? (
+            <img src={CrazyImg} alt="brave" />
+          ) : (
+            ""
+          )}
+          {book.author === "Margaret Atwood" ? (
+            <img src={HandmaidsImg} alt="brave" />
+          ) : (
+            ""
+          )}
+          {book.author === "Aldous Huxley" ? (
+            <img src={BraveImg} alt="brave" />
+          ) : (
+            ""
+          )}
+          {book.author === "Tara Westover" ? (
+            <img src={EducatedImg} alt="brave" />
+          ) : (
+            ""
+          )}
+        </div>
+
+        <S.Description>
+          <S.Autor>{book.author}</S.Autor>
+          <S.BookTitle>{book.title}</S.BookTitle>
+          <S.Review>{book.review}</S.Review>
+          <S.BookData>{book.description}</S.BookData>
+          <S.Price>{book.price}</S.Price>
+          <S.Price2>{book.prince_discount}</S.Price2>
+          <br />
+          <S.Button onClick={chamaAddBook}>
+            <S.Linki to="/cart">BUY NOW</S.Linki>
+          </S.Button>
+        </S.Description>
+      </S.ContainerProducts>
+    );
+  });
+
   return (
     <>
       <S.Container>
@@ -118,51 +170,7 @@ function ProductsHome() {
           </S.List>
         </S.ListGender>
 
-        {books.map(function (book) {
-          return (
-            <S.ContainerProducts>
-              <div>
-                {book.author === "Kevin Kwan" ? (
-                  <img src={CrazyImg} alt="brave" />
-                ) : (
-                  ""
-                )}
-                {book.author === "Margaret Atwood" ? (
-                  <img src={HandmaidsImg} alt="brave" />
-                ) : (
-                  ""
-                )}
-                {book.author === "Aldous Huxley" ? (
-                  <img src={BraveImg} alt="brave" />
-                ) : (
-                  ""
-                )}
-                {book.author === "Tara Westover" ? (
-                  <img src={EducatedImg} alt="brave" />
-                ) : (
-                  ""
-                )}
-              </div>
-
-              <S.Description>
-                <S.Autor>{book.author}</S.Autor>
-                <S.BookTitle>{book.title}</S.BookTitle>
-                <S.Review>{book.review}</S.Review>
-                <S.BookData>{book.description}</S.BookData>
-                <S.Price>{book.price}</S.Price>
-                <S.Price2>{book.prince_discount}</S.Price2>
-                <br />
-                <S.Button
-                  onClick={() => {
-                    setBuy(book.title);
-                  }}
-                >
-                  <S.Linki to="/cart">BUY NOW</S.Linki>
-                </S.Button>
-              </S.Description>
-            </S.ContainerProducts>
-          );
-        })}
+        {allbooks}
       </S.Container>
     </>
   );
