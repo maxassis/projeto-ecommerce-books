@@ -22,7 +22,7 @@ npm start
 
 Se preciso rodar um server Json 'fake' para consumir os dados da API localmente no endereço:  ``http://localhost:3333/books``
 
-bastando rodar o comando :
+Para rodar o Json Server execute o comando :
 
 ``npx json-server server.json -p 3333``
 
