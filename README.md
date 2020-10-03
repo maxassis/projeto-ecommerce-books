@@ -33,7 +33,7 @@ bastando rodar o comando :
 
 ![](https://images2.imgbox.com/98/f1/Yfc1Fxg4_o.jpg)
 
-![](https://images2.imgbox.com/f4/25/yz2NxaDI_o.jpg)
+![](https://images2.imgbox.com/65/0b/qqVKLlgP_o.jpg)
 
-![](https://images2.imgbox.com/cb/39/fuxXixGb_o.jpg)
+![](https://images2.imgbox.com/ec/e8/dwI4kpNM_o.jpg)
 
