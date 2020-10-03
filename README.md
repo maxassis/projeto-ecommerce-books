@@ -1,5 +1,5 @@
 ## Descrição
-Pequeno projeto de estudo de um ecommerce de Livros utilizando ReactJs, neste link de encontram as telas do app que foram desenvolvidas  [neste link](https://www.figma.com/file/jgdFJWm67RYM79JqqRVBbp/ecommerce-books?node-id=0%3A1)
+Pequeno projeto de um ecommerce de livros para fins de estudo utilizando ReactJs, neste link se encontram as telas do app que foram desenvolvidas [link telas](https://www.figma.com/file/jgdFJWm67RYM79JqqRVBbp/ecommerce-books?node-id=0%3A1)
 
 ## Tecnologias principais
 <li>HTML, CSS, JavaScript e React</li>     
